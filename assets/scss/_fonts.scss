@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
+      url('assets/fonts/FiraSans/FiraSans-Bold.woff2') format('woff2'),
+      url('assets/fonts/FiraSans/FiraSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Medium'), local('FiraSans-Medium'),
+      url('assets/fonts/FiraSans/FiraSans-Medium.woff2') format('woff2'),
+      url('assets/fonts/FiraSans/FiraSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: local('Fira Sans Regular'), local('FiraSans-Regular'),
+      url('assets/fonts/FiraSans/FiraSans-Regular.woff2') format('woff2'),
+      url('assets/fonts/FiraSans/FiraSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Bold'), local('Helvetica-Neue-Bold'),
+      url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+      url('assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

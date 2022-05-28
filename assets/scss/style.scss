@@ -1,0 +1,223 @@
+// Шрифты
+@import '_fonts';
+
+// Переменные
+@import '_variables';
+
+// Общие стили, классы, сбросы
+@import '_defaults';
+
+/* 
+  Обычно ещё разделяю файлы на header, footer и отдельные секции.
+  Но , т.к. кода мало, это избыточно.
+*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  font-size: 18px;
+
+  &__logo {
+    width: 136px;
+    height: 40px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__user {
+    display: flex;
+
+    & .btn {margin-left: 52px;}
+  }
+}
+
+.subscribe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding-top: 294px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 690px;
+    height: 690px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px -80px 100px rgba(239, 127, 26, 0.2);
+    top: 87px;
+    z-index: -1;
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 58px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    letter-spacing: 0.25em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__action {
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-size: 26px;
+    letter-spacing: 0.11em;
+  }
+
+  &__form {
+    display: flex;
+    height: 45px;
+
+    & .btn {
+      height: 45px;
+      width: 140px;
+      margin-left: -1px;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__input {
+    width: 267px;
+    border: 1px solid $dark-color;
+    padding: 0 12px;
+
+    &::placeholder {
+      font-weight: 400;
+      color: $placeholder-color;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  margin-bottom: 54px;
+
+  &__social {
+    display: flex;
+    width: max-content;
+    margin-left: auto;
+    column-gap: 33px;
+
+    & li {
+      fill: $dark-color;
+
+      &:hover {fill: $accent-color;}
+    }
+
+    svg {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      font: inherit;
+      transition: fill ease .3s;
+
+      & symbol {margin: auto;}
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .subscribe {
+    padding-top: 217px;
+  
+    &::before {
+      width: 498px;
+      height: 498px;
+      top: 98px;
+    }
+  
+    &__header {
+      margin-bottom: 48px;
+      font-size: 60px;
+      line-height: 60px;
+    }
+  
+    &__form {
+      display: flex;
+      height: 45px;
+  
+      & .btn {
+        height: 45px;
+        width: 140px;
+        margin-left: -1px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+      }
+    }
+  
+    &__input {
+      width: 267px;
+      border: 1px solid $dark-color;
+      padding: 0 12px;
+  
+      &::placeholder {
+        font-weight: 400;
+        color: $placeholder-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    margin-top: 29px;
+
+    &__user {
+      width: 25px;
+      height: 25px;
+  
+      background: url('/assets/img/icons/user.svg') center no-repeat;
+      background-size: cover;
+  
+      & button {
+        display: none;
+      }
+    }
+  }
+
+  .subscribe {
+    width: 100%;
+    padding-top: 105px;
+
+    &::before {
+      width: 300px;
+      height: 300px;
+      top: 79px
+    }
+
+    &__header {
+      margin-bottom: 35px;
+      font-size: 50px;
+    }
+    
+    &__action {
+      font-size: 19px;
+      margin-bottom: 36px;
+    }
+
+    &__form {
+      width: 100%;
+
+      & .btn {
+        flex-shrink: 0;
+        width: 128px;
+      }
+    }
+
+    &__input {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+
+  .footer__social {margin: auto;}
+}
